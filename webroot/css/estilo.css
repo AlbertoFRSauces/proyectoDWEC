@@ -1,0 +1,135 @@
+﻿/* 
+    Created on : 29/09/2021
+    Author     : Alberto Fernandez Ramirez
+   
+*/
+/*test @import url(//db.onlinewebfonts.com/c/3a47f5f06b5484abfeee9eac90348a9c?family=Gotham);*/
+@font-face{
+    font-family: "Gotham-Medium";
+    src: url("3a47f5f06b5484abfeee9eac90348a9c.eot");
+    src: url("3a47f5f06b5484abfeee9eac90348a9c.eot?#iefix") format("embedded-opentype"),
+     url("3a47f5f06b5484abfeee9eac90348a9c.woff2") format("woff2"),
+     url("3a47f5f06b5484abfeee9eac90348a9c.woff") format("woff"),
+     url("3a47f5f06b5484abfeee9eac90348a9c.ttf") format("truetype"),
+     url("3a47f5f06b5484abfeee9eac90348a9c.svg#Gotham-Medium") format("svg");
+}
+*{
+    box-sizing: border-box;
+    margin: 0px; 
+    padding: 0px;
+}
+body{
+    font-family:calibri, arial, sans-serif;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position:relative;
+    background-color:#EEEEEE;
+}
+/* INICIO Titulo*/
+header h1{
+    font-family: "Gotham-Medium";
+    font-size:42px;
+    text-transform:uppercase;
+    text-align: center;
+    color:white;
+    padding-left:15px;
+    padding-top:25px;
+    padding-bottom:25px;
+    padding-right:15px;
+    background-color:#D90000;
+}
+/* FIN Titulo */
+
+/* IMAGENES */
+.imagegithub{
+    margin-right:5px;
+    float: right;
+    width: 43px;
+    height: 43px;
+}
+.imageatras{
+	margin-left:5px;
+	float: left;
+	width: 43px;
+	height: 43px;
+}
+/* FIN IMAGENES */
+
+/* INICIO subtitulo */
+.segundot{
+    font-family: "Gotham-Medium";
+    font-size:19px;
+    text-align:center;
+    background-color:#252525;
+    color:white;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+/* FIN subtitulo */
+
+/* INICIO Cuadros sobre las practicas realizadas */
+.tabla{
+    background-color:white;
+    text-align:center;
+    height: auto;
+    width: auto;
+}
+table{
+    float: left;
+    border-collapse: collapse;
+    margin-top: 8%;
+    margin-left: 2.5%;
+    justify-content: center;
+}
+table img{
+    width: 390px;
+    height: 370px;
+    margin: 8px;
+    -webkit-transition: all 0.9s ease;
+    -moz-transition: all 0.9s ease;
+    -o-transition: all 0.9s ease;
+    -ms-transition: all 0.9s ease;
+}
+table img:hover {
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    transform:scale(1.2);
+}
+.titulofoto{
+    font-family: "Gotham-Medium";
+    font-size:17px;
+    text-transform:uppercase;
+    text-align:center;
+    background-color:white;
+    color:#212121;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.tabla tr a{
+    text-decoration:none;
+}
+/* FIN Cuadros sobre las practicas realizadas */
+
+/* INICIO footer */
+.piepagina{
+    font-family: "Gotham-Medium";
+    font-size: 14px;
+    background-color:#DDDDDD;
+    position: fixed;
+    bottom: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    right: 0px;
+    left: 0px;
+}
+.piepagina p{
+    color:#33333D;
+    text-align:center;
+    margin-left: 48px;
+}
+.piepagina p:first-of-type{
+    margin-top: 6px;
+}
+/* FIN footer */
