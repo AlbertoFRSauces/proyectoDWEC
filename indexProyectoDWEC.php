@@ -23,10 +23,10 @@
             
         </main>
         <footer class="piepagina">
-            <a href="../index.php"><img src="../webroot/css/img/atras.png" class="imageatras" alt="IconoAtras" /></a>
-            <a href="https://github.com/AlbertoFRSauces/proyectoDAW/tree/master/proyectoDWEC" target="_blank"><img href="https://github.com/AlbertoFRSauces/proyectoDAW/tree/master/proyectoDWEC" target="_blank" src="../webroot/css/img/github.png" class="imagegithub" alt="IconoGitHub" /></a>
+            <a href="../index.php"><img src="../proyectoDWEC/webroot/css/img/atras.png" class="imageatras" alt="IconoAtras" /></a>
+            <a href="https://github.com/AlbertoFRSauces/proyectoDWEC" target="_blank"><img href="https://github.com/AlbertoFRSauces/proyectoDWEC" target="_blank" src="../proyectoDWEC/webroot/css/img/github.png" class="imagegithub" alt="IconoGitHub" /></a>
             <p><a>&copy;</a>Alberto Fernández Ramírez 29/09/2021 Todos los derechos reservados.</p>
-            <p>Ultima actualización: 13/10/2021 18:59</p>
+            <p>Ultima actualización: 18/10/2021 16:59</p>
         </footer>
     </body>
 </html>
