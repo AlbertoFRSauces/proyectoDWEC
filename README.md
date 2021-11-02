@@ -13,3 +13,6 @@ Estructura del proyectoDWEC el cual contiene mi web para esa asignatura.
 ## Front end
 - HTML
 - CSS
+
+## Back end
+- PHP 7.4
