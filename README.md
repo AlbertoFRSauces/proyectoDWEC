@@ -5,10 +5,12 @@
 
 **Fecha Inicio Proyecto: 15/10/2021**
 
-**Ultima Actualización: 21/11/2021**
+**Ultima Actualización: 04/12/2021**
 
 ## Descripción 
 Estructura del proyectoDWEC el cual contiene mi web para esa asignatura.
+Contiene los resumenes de la teoria de cada TEMA.
+Contiene los ejercicios de el TEMA 1, TEMA 2, TEMA 3 y TEMA 4.
 
 ## Front end
 - HTML
@@ -19,6 +21,6 @@ Estructura del proyectoDWEC el cual contiene mi web para esa asignatura.
 
 ## Entornos
 ### Desarrollo (local)
--  http://192.168.3.107/
+-  http://daw207.sauces.local/proyectoDWEC
 ### Explotación (1&1)
--  http://daw207.ieslossauces.es/proyectoDWEC/indexProyectoDWEC.php
+-  http://daw207.ieslossauces.es/proyectoDWEC
