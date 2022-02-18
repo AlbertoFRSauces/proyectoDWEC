@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Fernandez Modelo de objetos del navegador</title>
+    <style>
+        .pes{
+            background-color: cadetblue;
+        }
+        #cuadroTeSigo{
+            position: absolute;
+            background-color: yellow;
+            width: 70px;
+            height: 30px;
+            color: black;
+        }
+    </style>
+    <script>
+        function moverRaton(event){
+            let cuadroTeSigo = document.getElementById('cuadroTeSigo');
+            let cordenadaX = event.clientX + "px";
+            let cordenadaY = event.clientY + "px";
+
+            cuadroTeSigo.style.left = cordenadaX;
+            cuadroTeSigo.style.top = cordenadaY;
+        }
+        document.addEventListener('mousemove', moverRaton);
+
+    </script>
+</head>
+    <body>
+        <p class="pes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, autem sint, facilis iure quidem amet aspernatur reprehenderit corrupti officia nesciunt officiis incidunt excepturi suscipit dolores. At, quas. Ullam, a hic.</p>
+        <p class="pes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, autem sint, facilis iure quidem amet aspernatur reprehenderit corrupti officia nesciunt officiis incidunt excepturi suscipit dolores. At, quas. Ullam, a hic.</p>
+        <p class="pes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, autem sint, facilis iure quidem amet aspernatur reprehenderit corrupti officia nesciunt officiis incidunt excepturi suscipit dolores. At, quas. Ullam, a hic.</p>
+        <p class="pes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, autem sint, facilis iure quidem amet aspernatur reprehenderit corrupti officia nesciunt officiis incidunt excepturi suscipit dolores. At, quas. Ullam, a hic.</p>
+        <p class="pes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, autem sint, facilis iure quidem amet aspernatur reprehenderit corrupti officia nesciunt officiis incidunt excepturi suscipit dolores. At, quas. Ullam, a hic.</p>
+        <div id="cuadroTeSigo">TE SIGO</div>
+    </body>
+</html>

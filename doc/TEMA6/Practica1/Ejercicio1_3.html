@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Fernandez Modelo de objetos del navegador</title>
+    <style>
+        div{
+            margin: auto;
+        }
+        #capa{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    
+</head>
+    <body>
+        <div id="capa">
+        </div>
+        <script>
+                var capa = document.getElementById('capa');
+                capa.addEventListener("mouseover", function(evento){
+                    capa.style.background = "green";
+                });
+                capa.addEventListener("mouseout", function(evento){
+                    capa.style.background = "white";
+                });
+                capa.addEventListener("mousedown", function(evento){
+                    if (evento.button == 0){
+                        capa.style.background = "red";
+                    }else{
+                        capa.style.background = "blue";
+                    }
+                });
+                capa.addEventListener("mouseup", function(evento){
+                    capa.style.background = "green";
+                });
+                capa.addEventListener("contextmenu", function(evento){
+                    evento.preventDefault();
+                });
+        </script>
+    </body>
+</html>

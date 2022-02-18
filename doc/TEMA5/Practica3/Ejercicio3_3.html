@@ -1,0 +1,50 @@
+<!--3. Crea una página que muestre una lista de palabras (unas 10). Las palabras irán apareciendo en la página, 
+una por segundo. Pasados 3 segundos, le preguntaremos al usuario si quiere que la lista de palabras 
+aparezca ordenada alfabéticamente. Si acepta la sugerencia, reordena las palabras.-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Document Object Model - Practica 3.3 - Alberto Fernandez</title>
+        <style>
+        </style>
+        <script>
+            window.addEventListener("load", listaDePalabras);
+
+            function listaDePalabras() {
+                var listaPalabras = ["cero","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve"];
+                var contador = 0;
+                function mostrarPalabra(){
+                    var lista = document.getElementById("prueba");
+                    var nuevoElemento = document.createElement("li");
+                    nuevoElemento.innerHTML=listaPalabras[contador];
+                    lista.appendChild(nuevoElemento);
+                    contador++;
+                    if(contador==10){
+                        clearInterval(mostrarPorSegundo);
+                        setTimeout(mostrarLista, 3000);
+                    }
+                }
+                function mostrarLista(){
+                    var confirmacion = confirm("¿Quiere que la lista de palabras aparezca ordenada?");
+                    if(confirmacion == true){
+                        listaPalabras.sort();
+                        var lista = document.getElementById("prueba");
+                        lista.innerHTML="";
+                        for (let i = 0; i < listaPalabras.length; i++) {
+                            var nuevoElemento = document.createElement("li");
+                            nuevoElemento.innerHTML=listaPalabras[i];
+                            lista.appendChild(nuevoElemento);
+                        }
+                    }
+                }
+                var mostrarPorSegundo = setInterval(mostrarPalabra, 1000);
+            }
+        </script>
+    </head>
+    <body>
+        <ul id="prueba">
+
+        </ul>
+    </body>
+</html>

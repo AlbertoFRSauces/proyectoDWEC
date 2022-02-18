@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alberto Fernandez Modelo de objetos del navegador</title>
+        <style>
+            *{
+                font-family: sans-serif;
+            }
+            main{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #anyadir{
+                background-color: red;
+                color: white;
+                border: 10px;
+                border: none;
+                height: 44px;
+                font-size: 23px;
+                cursor: pointer;
+            }
+            #campoTexto{
+                width: 256px;
+                height: 25px;
+                font-size: 90%;
+                background-color: aqua;
+                color: #fff;
+                border-radius: 32px;
+                border: none;
+                opacity: 0.92;  
+                height: 44px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="contenido">
+                <button type="button" id="anyadir" onclick="loadJSONDoc()">Cargar Catalogo</button>
+                <select name="valores" id="valores">
+                    <option value="pais">Selecciona opcion</option>
+                    <option value="pais">Pais</option>
+                    <option value="discografica">Discografica</option>
+                    <option value="precio">Precio</option>
+                    <option value="año">Año</option>
+                </select>
+                <div id="contenedor">
+                    <table id="lista">
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Artista</th>
+                            <th></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <script>
+            var mostrarTexto = document.getElementById("contenedor");
+            var lista = document.getElementById("lista");
+            var valorElegido = document.getElementById("valores");
+            function loadJSONDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onload = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        objetoJSON = JSON.parse(xhttp.responseText);
+                        var aDiscos = objetoJSON.CATALOG.CD;
+                        for(var i=0;i<aDiscos.length;i++){
+                            titulo = objetoJSON.CATALOG.CD[i].TITLE;
+                            artista = objetoJSON.CATALOG.CD[i].ARTIST;
+                            nuevoElemento = document.createElement("tr");
+                            nuevoElementoTitulo = document.createElement("td");
+                            nuevoElementoArtista = document.createElement("td");
+                            nuevoElementoVacio = document.createElement("td");
+                            nuevoElementoTitulo.innerHTML = titulo;
+                            nuevoElementoArtista.innerHTML = artista;
+                            nuevoElementoVacio.innerHTML = "";
+                            nuevoElemento.appendChild(nuevoElementoTitulo);
+                            nuevoElemento.appendChild(nuevoElementoArtista);
+                            nuevoElemento.appendChild(nuevoElementoVacio);
+                            lista.appendChild(nuevoElemento);
+                        }
+                        
+                            valorElegido.addEventListener("change", function(){
+                               if(valorElegido.value == "pais"){
+                                    for(var i=0;i<aDiscos.length;i++){
+                                        ciudad = objetoJSON.CATALOG.CD[i].COUNTRY;
+                                        tabla = document.getElementsByTagName("tr");
+                                        tabla[i+1].lastElementChild.innerHTML = ciudad;
+                                    }
+                                    tabla[0].lastElementChild.innerHTML = "Pais";
+                               }
+                               if(valorElegido.value == "discografica"){
+                                   for(var i=0;i<aDiscos.length;i++){
+                                        discografica = objetoJSON.CATALOG.CD[i].COMPANY;
+                                        tabla = document.getElementsByTagName("tr");
+                                        tabla[i+1].lastElementChild.innerHTML = discografica;
+                                    }
+                                    tabla[0].lastElementChild.innerHTML = "Discografica";
+                               }
+                               if(valorElegido.value == "precio"){
+                                   for(var i=0;i<aDiscos.length;i++){
+                                        precio = objetoJSON.CATALOG.CD[i].PRICE;
+                                        tabla = document.getElementsByTagName("tr");
+                                        tabla[i+1].lastElementChild.innerHTML = precio;
+                                    }
+                                    tabla[0].lastElementChild.innerHTML = "Precio";
+                               }
+                               if(valorElegido.value == "año"){
+                                   for(var i=0;i<aDiscos.length;i++){
+                                        anyo = objetoJSON.CATALOG.CD[i].YEAR;
+                                        tabla = document.getElementsByTagName("tr");
+                                        tabla[i+1].lastElementChild.innerHTML = anyo;
+                                    }
+                                    tabla[0].lastElementChild.innerHTML = "Año";
+                               }
+                            });
+                    }else{
+                        mostrarTexto.innerHTML = "Archivo no encontrado";
+                    }
+                };
+                xhttp.open("GET", "catalogo.json", true);
+                xhttp.send();
+                
+                mostrarTexto.style.display = "block";
+            }
+        </script>
+    </body>
+</html>

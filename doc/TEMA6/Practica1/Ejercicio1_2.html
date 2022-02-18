@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Fernandez Modelo de objetos del navegador</title>
+    <style>
+        .pes{
+            background-color: cadetblue;
+        }
+        #imagen{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: black;
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+    <script>
+        function mostrarImagen(evento){
+            if(evento.key == "F12" && evento.altKey){
+                let imagen = document.getElementById('imagen');
+                imagen.style.backgroundImage = "url('https://picsum.photos/id/459/400/400.jpg')";
+            }
+        }
+        document.addEventListener('keyup', mostrarImagen);
+    </script>
+</head>
+    <body>
+        <div id="imagen">AL PULSAR ALT+F12 COLOCARAS UNA IMAGEN</div>
+    </body>
+</html>

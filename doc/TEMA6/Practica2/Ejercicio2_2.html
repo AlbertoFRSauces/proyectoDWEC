@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Fernandez Modelo de objetos del navegador</title>
+    <style>
+        header{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100px;
+        }
+        #cabecera{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            left:0;
+            top:0;
+            width:100%;
+            height:60px;
+            background-color: orange;
+            color:white;
+            margin-bottom: 70px;
+        }
+        fieldset{
+            margin-top: 70px;
+            border: none;
+            
+        }
+        fieldset ul li{
+            list-style: none;
+        }
+        #descripcion{
+            display: none;
+        }
+        #errorenvio{
+            color: red;
+            display: none;
+        }
+        #imagen{
+            margin-top: 70px;
+            width: 450px;
+            height: 300px;
+        }
+        .formulario{
+            width: 300px;
+        }
+        main{
+            display: flex;
+        }
+    </style>
+</head>
+    <body>
+        <header>
+            <div id="cabecera">
+                <h1>INFORME DE INCIDENCIA</h1>
+            </div>
+        </header>
+        <main>
+            <img id="imagen" src="imagenes/distribucion.jpg" alt="imagen">
+            <form class="formulario">
+                <fieldset>
+                    <ul>
+                        <li>
+                            <label for="tipoincidencia">Tipo de incidencia:</label>
+                            <select id="tipoincidencia" name="tipoincidencia">
+                                <option value="distribucion" selected>distribucion</option> 
+                                <option value="oficina">oficina</option>
+                                <option value="produccion">produccion</option>
+                             </select>
+                        </li>
+                        <li>
+                            <label for="numeroserie">Numero de serie:</label>
+                            <input id="numeroserie" type="text" name="numeroserie" placeholder="000AAAA1">
+                            <div id="errorenvio">El formato no es correcto.</div>
+                        </li>
+                        <li>
+                            <button name="mostrardescripcion" id="mostrardescripcion">Mostrar Descripcion</button>
+                        </li>
+                        <li>
+                            <textarea name="descripcion" id="descripcion"></textarea>
+                        </li>
+                        <li>
+                            <button name="enviardatos" id="enviardatos">Enviar Datos</button>
+                        </li>
+                    </ul>
+                  </fieldset>
+            </form>
+        </main>
+        
+        <script>
+            var imagen = document.getElementById("imagen");
+            var tipodeincidencia= document.getElementById("tipoincidencia");
+            var mensajeerror = document.getElementById("errorenvio");
+            var numerodeserie = document.getElementById("numeroserie");
+            var botonenviar = document.getElementById("enviardatos");
+            var mostrarDescripcion = document.getElementById("mostrardescripcion");
+            var descripcion = document.getElementById("descripcion");
+            
+            tipoincidencia.addEventListener("change", function(evento){
+                imagen.setAttribute("src", `imagenes/${tipoincidencia.value}.jpg`);
+            });
+
+            botonenviar.addEventListener("click", function(evento){
+                if(/^[0-9]{3}[A-Z]{4}[12A]$/.test(numerodeserie.value)==false){
+                    evento.preventDefault();
+                    mensajeerror.style.display = "block";
+                }
+            });
+            
+            mostrarDescripcion.addEventListener("click", function(evento){
+                descripcion.style.display = "inline-block";
+                this.style.display = "none";
+            });
+        </script>
+    </body>
+</html>

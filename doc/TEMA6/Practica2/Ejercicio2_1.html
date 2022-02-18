@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Fernandez Modelo de objetos del navegador</title>
+    <style>
+        #cuadroTeSigo{
+            position: absolute;
+            background-color: yellow;
+            width: 70px;
+            height: 30px;
+            color: black;
+        }
+        #capa1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: yellow;
+            border: 1px solid black;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+        }
+        #capa2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border: 1px solid black;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+    <body>
+        <div id="capa1" draggable="true">Soy arrastrable</div>
+        <div id="capa2">Soy el destino</div>
+        <script>
+            var capa1 = document.getElementById("capa1");
+            var capa2 = document.getElementById("capa2");
+
+            capa1.addEventListener("drag", (evento)=>{
+                capa1.style.opacity = "0.5";
+            });
+            capa1.addEventListener("dragend", (evento)=>{
+                capa1.style.opacity = "1";
+                capa1.style.backgroundColor = "yellow";
+            });
+            capa2.addEventListener("dragenter", (evento)=>{
+                capa2.style.backgroundColor = "red";
+            });
+            capa2.addEventListener("dragleave", (evento)=>{
+                capa2.style.backgroundColor = "transparent";
+            });
+            capa2.addEventListener("dragover", (evento)=>{
+                evento.preventDefault();
+            });
+            capa2.addEventListener("drop", (evento)=>{
+                document.body.removeChild(capa1);
+                capa2.textContent = "Lo has logrado!";
+                capa2.style.backgroundColor = "yellow";
+            });
+        </script>
+    </body>
+</html>

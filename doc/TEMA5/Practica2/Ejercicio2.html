@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Document Object Model - Alberto Fernandez</title>
+    <style>
+        .miClase {
+            color: red;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", inicio);
+
+        function inicio() {
+            document.getElementById("crearParrafo").addEventListener("click", crearParrafo);
+            document.getElementById("crearImagen").addEventListener("click", crearImagen);
+            document.getElementById("borrarUltimo").addEventListener("click", borrarUltimo);
+            document.getElementById("borrarPrimero").addEventListener("click", borrarPrimero);
+            document.getElementById("sustituirPrimeroVacio").addEventListener("click", sustituirPrimero);
+        }
+
+        function crearParrafo() {
+            let nuevoParrafo = document.createElement("p");
+            let textoNuevo = document.getElementById("texto");
+            nuevoParrafo.innerHTML = textoNuevo.value;
+            nuevoParrafo.className = "miClase";
+            //nuevoParrafo.setAttribute("class","miClase");
+            let selector = document.getElementById("div1");
+            selector.appendChild(nuevoParrafo);
+        }
+
+        function crearImagen() {
+            var img = document.createElement("img");
+            img.src = prompt("Introduce el nombre de la imagen y la extension: ");
+            var src = document.getElementById("div1");
+            src.appendChild(img);
+        }
+
+        function borrarUltimo() {
+            let selector2 = document.getElementById("div1");
+            selector2.removeChild(selector2.lastChild);
+        }
+
+        function borrarPrimero() {
+            let selector3 = document.getElementById("div1");
+            selector3.removeChild(selector3.firstElementChild);
+        }
+
+        function sustituirPrimero() {
+            let nuevoParrafo = document.createElement("p");
+            nuevoParrafo.innerHTML = "Vacio";
+            nuevoParrafo.setAttribute("class","miClase");
+            let selector = document.getElementById("div1");
+            let sustituir = selector.children[0];
+            selector.replaceChild(nuevoParrafo,sustituir);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <br/>
+    <textarea id="texto"></textarea>
+    <br/>
+    <button id="crearParrafo">Crear parrafo</button>
+    <button id="crearImagen">Crear imagen</button>
+    <button id="borrarUltimo">Borrar ultimo</button>
+    <button id="borrarPrimero">Borrar primero</button>
+    <button id="sustituirPrimeroVacio">Sustituir primer párrafo por vacío</button>
+
+</body>
+
+</html>

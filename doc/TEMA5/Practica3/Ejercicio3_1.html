@@ -1,0 +1,52 @@
+<!-- 1. En editores como Visual Studio Code, que tienen el módulo Emmet incorporado, se pueden crear párrafos 
+con el texto clásico de pruebas “Lorem ipsum…”. Si estando en el body de una nueva página web 
+escribimos ol>li*9>lorem y luego pulsamos el tabulador, se crearán 9 párrafos numerados con el texto en 
+cuestión. Una vez creados los párrafos, el ejercicio consistirá en pedir al usuario un texto y un número del 
+1 al 10 para la posición de ese texto. El texto introducido se mostrará en negrita y en la posición indicada 
+sin eliminar ninguno de los párrafos anteriores. Se debe controlar que el usuario introduzca datos válidos. 
+Si el usuario cancela, la aplicación no hace nada.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Document Object Model - Practica 3.1 - Alberto Fernandez</title>
+        <style>
+        </style>
+        <script>
+            window.addEventListener("load", introducirTextoEnNegrita);
+
+            function introducirTextoEnNegrita() {
+                var posicion = parseInt(prompt("Introduzca la posicion del texto del 1 al 10: "));
+                while(posicion ==null || posicion<0 || posicion>10){
+                    posicion = parseInt(prompt("Introduzca la posicion del texto del 1 al 10: "));
+                }
+                let nuevoTexto = prompt("Introduzca un nuevo texto: ");
+                let addTexto = document.createElement("li");
+                addTexto.innerHTML = nuevoTexto;
+                addTexto.style["font-weight"]="bold";
+                if(posicion != 10){
+                    let selector1 = document.getElementById("prueba");
+                    let posicionNueva = selector1.children[posicion-1];
+                    selector1.insertBefore(addTexto, posicionNueva);
+                }else{
+                    let selector2 = document.getElementsByTagName("ol");
+                    selector2[0].appendChild(addTexto);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <ol id="prueba">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eligendi officiis adipisci! Quis officia necessitatibus repudiandae tenetur cumque, ratione ipsum aspernatur, saepe exercitationem expedita laboriosam ullam dolorem amet error nemo?</li>
+            <li>Alias distinctio, deleniti incidunt ad ex aliquam voluptatem similique fuga veniam obcaecati atque sed reiciendis tenetur esse odio numquam ea commodi sit error nobis! Porro, explicabo harum? Sequi, iste eum?</li>
+            <li>Nam libero provident autem praesentium temporibus, labore hic delectus asperiores sapiente, animi ipsa maiores, amet a molestias fugiat numquam. Nesciunt pariatur natus fugiat incidunt est cumque vitae deleniti eveniet commodi?</li>
+            <li>Magni voluptas, a, sit rem hic perspiciatis quibusdam, nisi sint quod quis nihil explicabo? Officia perferendis, beatae quibusdam error minima harum odit sunt quo? Fugit illo provident debitis corrupti fuga.</li>
+            <li>Fugit sunt laudantium accusantium dolor quis asperiores, velit quod doloremque ad necessitatibus odio vero cum harum placeat, labore, perspiciatis voluptates itaque delectus error facere? Et culpa reiciendis eaque itaque totam!</li>
+            <li>Magni dignissimos accusantium alias voluptate blanditiis commodi facere laboriosam distinctio nisi doloribus est, dolor, quo minus odio dolores explicabo ipsa odit aut ipsam. Necessitatibus asperiores possimus corporis ipsam nisi dolore?</li>
+            <li>Reprehenderit doloremque temporibus provident deleniti, veniam praesentium ullam quidem numquam laboriosam. Error, officiis autem maxime impedit voluptate ullam facere perferendis? Neque illum vero ut iusto harum quos suscipit placeat recusandae.</li>
+            <li>Inventore cupiditate in necessitatibus praesentium deserunt rerum incidunt aperiam debitis repellendus, odit, vitae ut. Quasi nesciunt reprehenderit libero natus vel odio exercitationem, quod odit labore dolores dicta voluptatum deleniti sed.</li>
+            <li>Cum, voluptate quam! Quia totam ipsum, autem distinctio deleniti magni consequuntur doloremque! Fugit aspernatur, quibusdam molestias temporibus corporis ipsam ullam, consectetur ratione quasi labore error iste sint debitis totam assumenda?</li>
+        </ol>
+    </body>
+</html>

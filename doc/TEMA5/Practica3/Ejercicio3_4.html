@@ -1,0 +1,61 @@
+<!--4. Crear una página que muestre un reloj con la hora actual donde los números serán imágenes o gifs sacados 
+de internet.-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Document Object Model - Practica 3.4 - Alberto Fernandez</title>
+        <style>
+            body{
+                background-color: black;
+                height: 100vh;
+                width: 100vw;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+        </style>
+        <script>
+            window.addEventListener("load", reloj);
+
+            function reloj() {
+                function moverReloj(){
+                    var lista = document.getElementById("div1");
+                    lista.innerHTML="";
+                    var fechaActual = new Date();
+                    var hora = fechaActual.getHours();
+                    var minuto = fechaActual.getMinutes();
+                    var segundo = fechaActual.getSeconds();
+                    var primerahora = parseInt(hora/10);
+                    var segundahora = parseInt(hora%10);
+                    var primeraminuto = parseInt(minuto/10) ;
+                    var segundaminuto = parseInt(minuto%10);
+                    var primerasegundo = parseInt(segundo/10);
+                    var segundasegundo = parseInt(segundo%10);
+                    var dospuntos = 104;
+                    var mostrarHora = crearImagen(primerahora) + crearImagen(segundahora)  + crearImagen(dospuntos) + crearImagen(primeraminuto) + crearImagen(segundaminuto) + crearImagen(dospuntos) + crearImagen(primerasegundo) + crearImagen(segundasegundo);
+                    var lista = document.getElementById("div1");
+                    var nuevoElemento = document.createElement("div");
+                    nuevoElemento.innerHTML=mostrarHora;
+                    setTimeout(moverReloj, 1000);
+                }
+
+                function crearImagen(numero) {
+                    var img = document.createElement("img");
+                    img.setAttribute("src",`imagenes/${numero}.png`);
+                    img.width="140";
+                    img.height="140";
+                    img.alt = `${numero}`;
+                    var src = document.getElementById("div1");
+                    src.appendChild(img);
+                }
+                setTimeout(moverReloj, 1000);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+
+        </div>
+    </body>
+</html>

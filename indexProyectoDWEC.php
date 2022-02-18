@@ -64,12 +64,45 @@
                     </tr>
                 </table>
             </section>
+            <section class="primerasfilas">
+                <table class="tabla">
+                    <tr class="bordetitulo">
+                        <td>
+                            <figure>
+                                <a href="../proyectoDWEC/units/indexTema5JS.php"><figcaption class="titulofoto">TEMA 5 : DOM - Modelo de Objetos del Documento</figcaption></a>
+                            </figure>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section class="primerasfilas">
+                <table class="tabla">
+                    <tr class="bordetitulo">
+                        <td>
+                            <figure>
+                                <a href="../proyectoDWEC/units/indexTema6JS.php"><figcaption class="titulofoto">TEMA 6 : Eventos en javascript</figcaption></a>
+                            </figure>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section class="primerasfilas">
+                <table class="tabla">
+                    <tr class="bordetitulo">
+                        <td>
+                            <figure>
+                                <a href="../proyectoDWEC/units/indexTema7JS.php"><figcaption class="titulofoto">TEMA 7 : TRABAJANDO CON AJAX, XML Y JSON</figcaption></a>
+                            </figure>
+                        </td>
+                    </tr>
+                </table>
+            </section>
         </main>
         <footer class="piepagina">
             <a href="../index.php"><img src="../proyectoDWEC/webroot/css/img/atras.png" class="imageatras" alt="IconoAtras" /></a>
             <a href="https://github.com/AlbertoFRSauces/proyectoDWEC" target="_blank"><img href="https://github.com/AlbertoFRSauces/proyectoDWEC" target="_blank" src="../proyectoDWEC/webroot/css/img/github.png" class="imagegithub" alt="IconoGitHub" /></a>
             <p><a>&copy;</a><a href="http://daw207.ieslossauces.es/index.php">Alberto Fernández Ramírez</a> 29/09/2021 Todos los derechos reservados.</p>
-            <p>Ultima actualización: 04/12/2021 17:59 - Release 2.0</p>
+            <p>Ultima actualización: 18/02/2022 20:29 - Release 3.0</p>
         </footer>
     </body>
 </html>
