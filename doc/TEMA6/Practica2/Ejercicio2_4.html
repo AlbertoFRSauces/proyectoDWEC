@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alberto Fernandez Modelo de objetos del navegador</title>
+        <style>
+            *{
+                font-family: sans-serif;
+            }
+            main{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            h1{
+                color: teal;
+                text-align: center;
+            }
+            fieldset{
+                border: none;
+            }
+            li{
+                margin-bottom: 10px;
+            }
+            #quitarestilo{
+                list-style: none;
+                margin-left: -30px;
+                margin-bottom: 10px;
+            }
+            #tarea{
+                border: red solid 1px;
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+                height: 40px;
+                width: 500px;
+                font-size: 23px;
+                padding-left: 10px;
+            }
+            #anyadir{
+                background-color: red;
+                color: white;
+                border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
+                border: none;
+                height: 44px;
+                width: 80px;
+                font-size: 23px;
+                cursor: pointer;
+            }
+            .listatareas{
+                margin-right: 15px;
+                padding-bottom: 10px;
+            }
+            li{
+                color: teal;
+                font-size: 23px;
+            }
+            .quitar{
+                background-color: red;
+                color: white;
+                border-radius: 10px;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <body>
+            <header>
+                <div id="cabecera">
+                    <h1>Lista de tareas</h1>
+                </div>
+            </header>
+            <main>
+                <form class="formulario">
+                    <fieldset>
+                        <ul>
+                            <li id="quitarestilo">
+                                <input id="tarea" type="text" name="tarea" placeholder="Nueva tarea"><button type="button"  id="anyadir">+</button>
+                            </li>
+                        </ul>
+                        <ul id="listaanyadir">
+                            
+                        </ul>
+                      </fieldset>
+                </form>
+            </main>
+        <script>
+            var cuadroTexto = document.getElementById("tarea");
+            var botonAnyadir = document.getElementById("anyadir");
+            var listaAnyadirTarea = document.getElementById("listaanyadir");
+
+            botonAnyadir.addEventListener("click", function(evento){
+                var li = document.createElement("li");
+                var a = document.createElement("a");
+                var boton = document.createElement("button");
+                if(cuadroTexto.value != ""){
+                    a.innerHTML = cuadroTexto.value;
+                    a.setAttribute("class", "listatareas");
+                    boton.setAttribute("class", "quitar");
+                    boton.innerHTML = "quitar";
+                    li.appendChild(a);
+                    li.appendChild(boton);
+                    listaAnyadirTarea.appendChild(li);
+
+                    boton.addEventListener("click", function(evento){
+                        listaAnyadirTarea.removeChild(evento.target.parentElement);
+                    });
+                    a.addEventListener("click", function(evento){
+                        listaAnyadirTarea.insertBefore(evento.target.parentElement, listaAnyadirTarea.firstElementChild);
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

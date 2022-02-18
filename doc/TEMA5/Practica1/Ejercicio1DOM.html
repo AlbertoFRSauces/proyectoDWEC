@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Document Object Model - Creación y modificación de elementos</title>
+        <meta charset="UTF-8">
+		<style>
+            .miClase{
+                color:red;
+            }
+        </style>
+        <script>
+            window.addEventListener("load",inicio);
+            
+            function inicio(){
+                document.getElementById("cambiarTextos").addEventListener("click",cambiarTextos);
+                document.getElementById("cambiarClases").addEventListener("click",cambiarClases);
+                document.getElementById("quitarClases").addEventListener("click",quitarClases);
+            }
+            var seccion = document.getElementsByTagName("p");
+            function cambiarTextos(){
+                seccion[0].innerHTML = "Primer parrafo con el texto cambiado.";
+                seccion[1].innerHTML = "Segundo parrafo con el texto cambiado.";
+                seccion[2].innerHTML = "Tercer parrafo con el texto cambiado.";
+            }
+            
+            function cambiarClases(){
+                seccion[0].setAttribute("class","miClase");
+                seccion[1].setAttribute("class","miClase");
+                seccion[2].setAttribute("class","miClase");
+            }
+            
+            function quitarClases(){
+                seccion[0].removeAttribute("class","miClase");
+                seccion[1].removeAttribute("class","miClase");
+                seccion[2].removeAttribute("class","miClase");
+            }
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <p id="parrafo1">Este es el primer párrafo</p>
+            <p id="parrafo2">Este es el segundo párrafo</p>
+            <p id="parrafo3" class="miClase">Este es el tercer párrafo</p>
+        </div>
+        <br/>
+        <button id="cambiarTextos">Cambiar texto de párrafos</button>
+        <button id="cambiarClases">Cambiar clases de párrafos</button>
+        <button id="quitarClases">Quitar clases de todos los párrafos</button>
+    </body>
+</html>

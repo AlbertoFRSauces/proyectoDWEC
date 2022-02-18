@@ -1,0 +1,62 @@
+<!--5. Crear una aplicación que nos muestre el número de veces que hemos entrado. Lo haremos mediante una 
+cookie que caducará después de un año. Pero primero avisaremos con un cuadro de confirmación, que 
+grabamos cookies en la página. Si el usuario no acepta cookies, las borramos y no mostraremos las visitas.
+Ese mensaje aparecerá al principio. Ese cuadro, sale una vez por sesión.-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Document Object Model - Practica 3.4 - Alberto Fernandez</title>
+        <style>
+        </style>
+        <script>
+            window.addEventListener("load", cookie);
+
+            function cookie(){
+                var expr = /(confirmar=)(SI|NO)/;
+                var expr2 = /(confirmar=SI)/;
+                var fecha = new Date();
+                var fechaCaducidad = new Date(fecha.getTime()+365*24*60*60*1000);
+                var fechaEliminar = new Date(fecha.getDate()-365*24*60*60*1000);
+                if(!expr.test(document.cookie)){
+                    var aceptarCookie = confirm("¿Desea aceptar las cookies de nuestra pagina web?");
+                    
+                    if(aceptarCookie){
+                        document.cookie = `confirmar=SI`;
+                        document.cookie = `numeroConexiones=1; expires:${fechaCaducidad.toUTCString}`;
+                        var frase = `El numero de veces que ha entrado ha sido: 1`;
+                        var elementodiv = document.getElementById("prueba");
+                        var nuevoElemento = document.createElement("p");
+                        nuevoElemento.innerHTML = frase;
+                        elementodiv.appendChild(nuevoElemento);
+                    }else{
+                        document.cookie = `confirmar=NO`;
+                        document.cookie = `numeroConexiones = 0; expires:${fechaEliminar.toUTCString}`
+                    }
+                }else{
+                    if(expr2.test(document.cookie)){
+                        var contenidoCookie = document.cookie.split("; ");
+                        for (const c of contenidoCookie) {
+                            let [clave, valor] = c.split("=");
+                            if(clave=="numeroConexiones"){
+                                var valorNumerico = parseInt(valor);
+                                valorNumerico++;
+                                document.cookie = `numeroConexiones=${valorNumerico}; expires:${fechaCaducidad.toUTCString}`;
+                            }
+                        }
+                        var frase = `El numero de veces que ha entrado ha sido: ${valorNumerico}`;
+                        var elementodiv = document.getElementById("prueba");
+                        var nuevoElemento = document.createElement("p");
+                        nuevoElemento.innerHTML = frase;
+                        elementodiv.appendChild(nuevoElemento);
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <article id="prueba">
+
+        </article>
+    </body>
+</html>

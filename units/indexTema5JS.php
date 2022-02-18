@@ -17,7 +17,7 @@
             <h1>Desarrollo de Aplicaciones Web</h1>
         </header>
         <article class="segundot">
-            <h2>Desarrollo Web Entorno Cliente - TEMA 4</h2>
+            <h2>Desarrollo Web Entorno Cliente - TEMA 5</h2>
         </article>
         <main class="container">
             <section class="primerasfilas">
@@ -25,7 +25,17 @@
                     <tr class="bordetitulo">
                         <td>
                             <figure>
-                                <a href="../doc/ResumenUD4.pdf" target="_blank"><figcaption class="titulofoto">Resumen del contenido del TEMA 4</figcaption></a>
+                                <a><figcaption class="titulofoto">Practica 1. EJERCICIOS DOM 1</figcaption></a>
+                            </figure>
+                        </td>
+                        <td class="cajaimagen">
+                            <figure>
+                                <a href="../doc/TEMA5/Practica1/Ejercicio1DOM.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
+                            </figure>
+                        </td>
+                        <td class="cajaimagen">
+                            <figure>
+                                <a href="../mostrarcodigo/muestraPractica1Tema5.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
                             </figure>
                         </td>
                     </tr>
@@ -36,17 +46,17 @@
                     <tr class="bordetitulo">
                         <td>
                             <figure>
-                                <a href="../doc/TEMA4/Practica1/EJERCICIOSSTRING.pdf" target="_blank"><figcaption class="titulofoto">Practica 1. EJERCICIOS PRÁCTICOS STRING</figcaption></a>
+                                <a><figcaption class="titulofoto">Practica 2. EJERCICIOS DOM 2</figcaption></a>
                             </figure>
                         </td>
                         <td class="cajaimagen">
                             <figure>
-                                <a href="../doc/TEMA4/Practica1/index.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
+                                <a href="../doc/TEMA5/Practica2/Ejercicio2.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
                             </figure>
                         </td>
                         <td class="cajaimagen">
                             <figure>
-                                <a href="../mostrarcodigo/muestraPractica1Tema4.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
+                                <a href="../mostrarcodigo/muestraPractica2Tema5.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
                             </figure>
                         </td>
                     </tr>
@@ -57,17 +67,17 @@
                     <tr class="bordetitulo">
                         <td>
                             <figure>
-                                <a href="../doc/TEMA4/Practica2/EJERCICIOSDATE.pdf" target="_blank"><figcaption class="titulofoto">Practica 2. EJERCICIOS PRÁCTICOS DATE</figcaption></a>
+                                <a href="../doc/TEMA5/Practica3/Ejercicio3.pdf" target="_blank"><figcaption class="titulofoto">Practica 3. EJERCICIOS DOM 3-1</figcaption></a>
                             </figure>
                         </td>
                         <td class="cajaimagen">
                             <figure>
-                                <a href="../doc/TEMA4/Practica2/index.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
+                                <a href="../doc/TEMA5/Practica3/Ejercicio3_1.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
                             </figure>
                         </td>
                         <td class="cajaimagen">
                             <figure>
-                                <a href="../mostrarcodigo/muestraPractica2Tema4.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
+                                <a href="../mostrarcodigo/muestraPractica3_1Tema5.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
                             </figure>
                         </td>
                     </tr>
@@ -78,17 +88,17 @@
                     <tr class="bordetitulo">
                         <td>
                             <figure>
-                                <a href="../doc/TEMA4/Practica3/EJERCICIOSEXPRESIONESREGULARES.pdf" target="_blank"><figcaption class="titulofoto">Practica 3. EJERCICIOS PRÁCTICOS EXPRESIONES REGULARES</figcaption></a>
+                                <a href="../doc/TEMA5/Practica3/Ejercicio3.pdf" target="_blank"><figcaption class="titulofoto">Practica 3. EJERCICIOS DOM 3-2</figcaption></a>
                             </figure>
                         </td>
                         <td class="cajaimagen">
                             <figure>
-                                <a href="../doc/TEMA4/Practica3/index.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
+                                <a href="../doc/TEMA5/Practica3/Ejercicio3_2.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
                             </figure>
                         </td>
                         <td class="cajaimagen">
                             <figure>
-                                <a href="../mostrarcodigo/muestraPractica3Tema4.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
+                                <a href="../mostrarcodigo/muestraPractica3_2Tema5.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
                             </figure>
                         </td>
                     </tr>
@@ -99,17 +109,17 @@
                     <tr class="bordetitulo">
                         <td>
                             <figure>
-                                <a href="../doc/TEMA4/Practica4/EJERCICIOSOBJETOSDEFINIDOSPORELUSUARIO.pdf" target="_blank"><figcaption class="titulofoto">Practica 4. EJERCICIOS PRÁCTICOS OBJETOS DEFINIDOS POR EL USUARIO</figcaption></a>
+                                <a href="../doc/TEMA5/Practica3/Ejercicio3.pdf" target="_blank"><figcaption class="titulofoto">Practica 3. EJERCICIOS DOM 3-3</figcaption></a>
                             </figure>
                         </td>
                         <td class="cajaimagen">
                             <figure>
-                                <a href="../doc/TEMA4/Practica4/index.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
+                                <a href="../doc/TEMA5/Practica3/Ejercicio3_3.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
                             </figure>
                         </td>
                         <td class="cajaimagen">
                             <figure>
-                                <a href="../mostrarcodigo/muestraPractica4Tema4.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
+                                <a href="../mostrarcodigo/muestraPractica3_3Tema5.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
                             </figure>
                         </td>
                     </tr>
@@ -120,17 +130,38 @@
                     <tr class="bordetitulo">
                         <td>
                             <figure>
-                                <a href="../doc/TEMA4/Practica5/EJERCICIOHERENCIA.pdf" target="_blank"><figcaption class="titulofoto">Practica 5. EJERCICIOS PRÁCTICOS HERENCIA</figcaption></a>
+                                <a href="../doc/TEMA5/Practica3/Ejercicio3.pdf" target="_blank"><figcaption class="titulofoto">Practica 3. EJERCICIOS DOM 3-4</figcaption></a>
                             </figure>
                         </td>
                         <td class="cajaimagen">
                             <figure>
-                                <a href="../doc/TEMA4/Practica5/index.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
+                                <a href="../doc/TEMA5/Practica3/Ejercicio3_4.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
                             </figure>
                         </td>
                         <td class="cajaimagen">
                             <figure>
-                                <a href="../mostrarcodigo/muestraPractica5Tema4.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
+                                <a href="../mostrarcodigo/muestraPractica3_4Tema5.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
+                            </figure>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section class="primerasfilas">
+                <table class="tabla">
+                    <tr class="bordetitulo">
+                        <td>
+                            <figure>
+                                <a href="../doc/TEMA5/Practica3/Ejercicio3.pdf" target="_blank"><figcaption class="titulofoto">Practica 3. EJERCICIOS DOM 3-5</figcaption></a>
+                            </figure>
+                        </td>
+                        <td class="cajaimagen">
+                            <figure>
+                                <a href="../doc/TEMA5/Practica3/Ejercicio3_5.html" target="_blank"><img src="../webroot/css/img/play.png" class="imageplay" alt="Botonplay"/></a>
+                            </figure>
+                        </td>
+                        <td class="cajaimagen">
+                            <figure>
+                                <a href="../mostrarcodigo/muestraPractica3_5Tema5.php"><img src="../webroot/css/img/codigo.png" class="imagecodigo" alt="Botoncodigo"/></a>
                             </figure>
                         </td>
                     </tr>

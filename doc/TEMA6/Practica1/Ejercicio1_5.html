@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Fernandez Modelo de objetos del navegador</title>
+    <style>
+        body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+        #cuadro{
+            
+            background-color: white;
+            border: 1px solid black;
+            width: 70vw;
+            height: 50vh;
+            overflow: scroll;
+        }
+        #cerrar{
+            background-color: black;
+            color: white;
+            border-radius: 28px;
+            border: none;
+            width: 200px;
+            height: 40px;
+            font-size: 20px;
+            display: none;
+        }
+    </style>
+</head>
+    <body>
+        <div id="cuadro">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate eveniet cum, numquam veritatis tempore rerum quia explicabo, ea, dicta corporis libero nemo tempora magni voluptate deleniti reprehenderit sit consequuntur!
+            </p>
+        </div>
+        <div>
+            <input type="button" value="Cerrar" id="cerrar">
+        </div>
+        <script>
+            let cuadro = document.getElementById("cuadro");
+            let boton = document.getElementById("cerrar");
+            cuadro.addEventListener("scroll", function(event){
+                if((cuadro.scrollTop + cuadro.clientHeight) == cuadro.scrollHeight){
+                    boton.style.display = "block";
+                }else{
+                    boton.style.display = "none";
+                }
+            });
+            boton.addEventListener('click', function(event){
+                if(cuadro.style.display == "none"){
+                    cuadro.style.display = "block";
+                }else{
+                    cuadro.style.display = "none";
+                    boton.style.display = "none";
+                }
+            });
+        </script>
+    </body>
+</html>
